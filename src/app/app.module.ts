@@ -9,9 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import 'hammerjs';
 
+import { QuestionDetailComponet } from './question/question-detail.componet'
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuestionDetailComponet
   ],
   imports: [
     BrowserModule,
