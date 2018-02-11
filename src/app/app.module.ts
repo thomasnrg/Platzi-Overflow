@@ -11,13 +11,16 @@ import 'hammerjs';
 
 import { QuestionDetailComponet } from './question/question-detail.componet';
 import { AnswerFormComponent } from './answer/answer-form.componet';
+import { SigninScreenComponet }  from "./auth/signin-screen.componet";
+
 import { MomentModule } from 'angular2-moment';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionDetailComponet,
-    AnswerFormComponent
+    AnswerFormComponent,
+    SigninScreenComponet
   ],
   imports: [
     BrowserModule,
