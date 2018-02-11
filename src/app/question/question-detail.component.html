@@ -15,7 +15,7 @@
 <div class="answers">
   <h3>Respuestas</h3>
 
-  <ul class="answers-list">
+  <ul class="answers-list" *ngIf="question.answers.length > 0">
     <li>
       <h5>
         Paula Becerra
@@ -45,6 +45,10 @@
     </li>
   </ul>
 
+  <p *ngIf="question.answers.length === 0">
+    Se el primero en responder esta pregunta
+  </p>
+
   <app-answer-form></app-answer-form>
-  
+
 </div>
