@@ -3,7 +3,8 @@ import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-answer-form',
-  templateUrl: './answer-form.componet.html'
+  templateUrl: './answer-form.componet.html',
+  styleUrls: ['./answer-form.component.css']
 })
 
 export class AnswerFormComponent {
