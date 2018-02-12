@@ -9,20 +9,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import 'hammerjs';
 
-import { QuestionDetailComponet } from './question/question-detail.componet';
+import { QuestionDetailComponent } from './question/question-detail.component';
 import { AnswerFormComponent } from './answer/answer-form.componet';
 import { SigninScreenComponent }  from "./auth/signin-screen.componet";
 import { SignupScreenComponent }  from "./auth/signup-screen.component";
+import { QuestionListComponent } from './question/question-list.component';
 
 import { MomentModule } from 'angular2-moment';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionDetailComponet,
+    QuestionDetailComponent,
     AnswerFormComponent,
     SigninScreenComponent,
-    SignupScreenComponent
+    SignupScreenComponent,
+    QuestionListComponent
   ],
   imports: [
     BrowserModule,

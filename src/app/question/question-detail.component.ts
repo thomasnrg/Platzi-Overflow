@@ -7,7 +7,7 @@ import { Question } from './question.model'
   styleUrls: ['./question-detail.component.css']
 })
 
-export class QuestionDetailComponet {
+export class QuestionDetailComponent {
   question: Question = new Question(
     'Esta es una nueva pregunta sobre IOS',
     'Tengo una pregunta acerca de IOS...',
