@@ -1,0 +1,45 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Nombre"
+      formControlName="firstName"
+      id="firstName">
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Apellido"
+      formControlName="lastName"
+      id="lastName">
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Correo Electronico"
+      formControlName="email"
+      id="email">
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      type="password"
+      matInput
+      placeholder="Contraseña"
+      formControlName="password"
+      id="password">
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      type="password"
+      matInput
+      placeholder="Repita Contraseña"
+      formControlName="passwordVerify"
+      id="passwordVerify">
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Crear Cuenta</button>
+  <p class="signupText">
+    ¿Ya tienes cuenta? Inicia sesión <a routerLink="">aquí</a>.
+  </p>
+
+</form>

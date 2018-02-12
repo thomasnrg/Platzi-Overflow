@@ -12,3 +12,17 @@ form {
   width: 90%;
   margin: 40px auto;
 }
+
+.signupText {
+  text-align: center;
+}
+
+.signupSumit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: white;
+  border-top: 2px solid #dcdcdc;
+}
