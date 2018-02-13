@@ -22,6 +22,14 @@ const q = new Question(
         font-size: 48px !important;
         padding: 0px;
       }
+
+      .add-question{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        font-size: 24px;
+        z-index: 200;
+      }
     `]
 })
 
