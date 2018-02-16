@@ -21,11 +21,17 @@ export class QuestionService {
                   .catch(this.handleError)
    }
 
-   handleError() {
-     
+   getQuestion(id): Promise<void | Question> {
+     const url = urljoin(this.questionsUrl, id)
+     return this.http.get(url)
+              .toPromise()
+              .then(Response)
+              .catch()
    }
 
-   getQuestion() {
-
+   handleError(error: any) {
+     const errMsg = error.message ? error.message :
+     error.status ? `${error.status} - ${error.statusText}` : 'Server error'
+     console.log(errMsg)
    }
 }
