@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core'
 import { Question } from './question.model'
 import { Http } from '@angular/http';
 import { environment } from '../../environments/environment'
-import urljoin from 'url-join'
+import * as urljoin from 'url-join';
 
 @Injectable()
 
@@ -25,8 +25,8 @@ export class QuestionService {
      const url = urljoin(this.questionsUrl, id)
      return this.http.get(url)
               .toPromise()
-              .then(Response)
-              .catch()
+              .then(response => response.json() as Question)
+              .catch(this.handleError)
    }
 
    handleError(error: any) {
