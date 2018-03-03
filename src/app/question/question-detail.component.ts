@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Question } from './question.model'
 import { QuestionService } from './question.service'
 import { ActivatedRoute } from '@angular/router';
@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class QuestionDetailComponent implements OnInit{
   question?: Question
+  sub:any
   loading = true
 
   constructor(
@@ -25,6 +26,7 @@ export class QuestionDetailComponent implements OnInit{
         .getQuestion(params.id)
         .then((question: Question) => {
           this.question = question
+          this.loading = false
         })
     })
   }
