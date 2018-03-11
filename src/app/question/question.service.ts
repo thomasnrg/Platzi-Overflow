@@ -33,7 +33,7 @@ export class QuestionService {
 
    addQuestion(question: Question) {
      const body = JSON.stringify(question)
-     const headers = new Headers({ 'Content-Type': 'application/json' })
+     const headers = new Headers({ 'Content-Type': 'application/json' });
 
      return this.http.post(this.questionsUrl, body, { headers })
       .map((response: Response) => response.json())
