@@ -4,6 +4,7 @@ import { Answer } from '../answer/answer.model'
 import { Http, Headers, Response } from '@angular/http';
 import { environment } from '../../environments/environment'
 import * as urljoin from 'url-join';
+import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
@@ -44,7 +45,7 @@ export class QuestionService {
    addAnswer(answer: Answer) {
      const body = JSON.stringify(answer)
      const headers = new Headers({ 'Content-Type': 'application/json' });
-     const url = urljoin(this.questionsUrl, answer.question._id, 'answers')
+     const url = urljoin(this.questionsUrl, answer.question._id, 'answers');
 
      return this.http.post(url, body, { headers })
       .map((response: Response) => response.json())
