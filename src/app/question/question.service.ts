@@ -45,7 +45,8 @@ export class QuestionService {
    addAnswer(answer: Answer) {
      const body = JSON.stringify(answer)
      const headers = new Headers({ 'Content-Type': 'application/json' });
-     const url = urljoin(this.questionsUrl, answer.question._id, 'answers');
+     const idString = answer.question._id.toString();
+     const url = urljoin(this.questionsUrl, idString, 'answers');
 
      return this.http.post(url, body, { headers })
       .map((response: Response) => response.json())
